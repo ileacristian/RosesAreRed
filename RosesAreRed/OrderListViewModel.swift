@@ -8,25 +8,27 @@
 import Foundation
 import Combine
 
+@MainActor
 class OrderListViewModel: ObservableObject {
+
+    @Published var orders: [Order] = []
+    @Published var error: String = ""
 
     var cancellables: Set<AnyCancellable> = []
 
     init() {
-        API.shared.getOrders()
-            .sink { completion in
-                print(completion)
-            } receiveValue: { orders in
-                print(orders)
-            }
-            .store(in: &cancellables)
-
-        API.shared.getCustomers()
-            .sink { completion in
-                print(completion)
-            } receiveValue: { customers in
-                print(customers)
-            }
-            .store(in: &cancellables)
+        fetchOrders()
     }
+
+    func fetchOrders() {
+        orders = []
+        API.shared.getOrders()
+            .catch { error -> Just<[Order]> in
+                self.error = error.prettyErrorMessage()
+                return Just([])
+            }
+            .assign(to: &$orders)
+    }
+
+    
 }

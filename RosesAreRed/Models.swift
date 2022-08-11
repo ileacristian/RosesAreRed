@@ -8,13 +8,15 @@
 import Foundation
 import CoreLocation
 
-enum OrderStatus: String, Codable {
+enum OrderStatus: String, Codable, CaseIterable, Identifiable {
+    var id: Self { self }
+
     case new
     case pending
     case delivered
 }
 
-struct Order: Codable {
+struct Order: Codable, Identifiable {
     let id: Int
     let description: String
     let price: Int
@@ -23,7 +25,7 @@ struct Order: Codable {
     let status: OrderStatus
 }
 
-struct Customer: Codable {
+struct Customer: Codable, Identifiable {
     let id: Int
     let name: String
     let latitude: CLLocationDegrees

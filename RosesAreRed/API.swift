@@ -8,12 +8,24 @@
 import Foundation
 import Combine
 
-
 enum RosesAreRedError: Error {
     case nonHTTPResponse
     case requestFailed(Int)
     case networkingError(URLError)
     case decodingError(DecodingError)
+
+    func prettyErrorMessage() -> String {
+        switch self {
+        case .nonHTTPResponse:
+            return "Error: received non-HTTP response."
+        case .requestFailed(_):
+            return "Error: request failed."
+        case .networkingError(_):
+            return "Error: networking issue."
+        case .decodingError(_):
+            return "Error: unable to decode HTTP response."
+        }
+    }
 }
 
 class API {
@@ -59,6 +71,7 @@ class API {
                     return error as! RosesAreRedError
                 }
             }
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }
