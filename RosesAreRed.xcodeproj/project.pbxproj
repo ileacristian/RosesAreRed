@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D635B0F28A55D2800AB9DC8 /* OrderItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */; };
+		7D635B1128A5632700AB9DC8 /* OrderItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D635B1028A5632700AB9DC8 /* OrderItemDetails.swift */; };
 		7DC66B2928A51D7700BC74BA /* RosesAreRedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */; };
 		7DC66B2B28A51D7700BC74BA /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2A28A51D7700BC74BA /* OrderListView.swift */; };
 		7DC66B2D28A51D7800BC74BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DC66B2C28A51D7800BC74BA /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemRowView.swift; sourceTree = "<group>"; };
+		7D635B1028A5632700AB9DC8 /* OrderItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemDetails.swift; sourceTree = "<group>"; };
 		7DC66B2528A51D7700BC74BA /* RosesAreRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosesAreRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosesAreRedApp.swift; sourceTree = "<group>"; };
 		7DC66B2A28A51D7700BC74BA /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */,
 				7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */,
 				7DC66B3D28A542C200BC74BA /* OrderStatusView.swift */,
+				7D635B1028A5632700AB9DC8 /* OrderItemDetails.swift */,
 				7DC66B3628A52A6200BC74BA /* API.swift */,
 				7DC66B3B28A531C400BC74BA /* Models.swift */,
 				7DC66B2C28A51D7800BC74BA /* Assets.xcassets */,
@@ -156,6 +159,7 @@
 			files = (
 				7DC66B2B28A51D7700BC74BA /* OrderListView.swift in Sources */,
 				7DC66B3728A52A6200BC74BA /* API.swift in Sources */,
+				7D635B1128A5632700AB9DC8 /* OrderItemDetails.swift in Sources */,
 				7DC66B2928A51D7700BC74BA /* RosesAreRedApp.swift in Sources */,
 				7DC66B3E28A542C200BC74BA /* OrderStatusView.swift in Sources */,
 				7D635B0F28A55D2800AB9DC8 /* OrderItemRowView.swift in Sources */,

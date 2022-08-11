@@ -13,8 +13,10 @@ struct OrderListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.orders) { order in
-                    OrderItemRowView(order: order)
+                ForEach($viewModel.orders) { order in
+                    NavigationLink(destination: OrderItemDetails(order: order)) {
+                        OrderItemRowView(order: order.wrappedValue)
+                    }
                 }
 
                 if viewModel.orders.isEmpty {

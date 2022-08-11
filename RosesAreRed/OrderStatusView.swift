@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct OrderStatusView: View {
-    @State var status: OrderStatus
+    let status: OrderStatus
     var body: some View {
         Text(status.rawValue)
             .font(.system(size: 12))
