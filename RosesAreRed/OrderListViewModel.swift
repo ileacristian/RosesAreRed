@@ -14,8 +14,6 @@ class OrderListViewModel: ObservableObject {
     @Published var orders: [Order] = []
     @Published var error: String?
 
-    var cancellables: Set<AnyCancellable> = []
-
     init() {
         fetchOrders()
     }

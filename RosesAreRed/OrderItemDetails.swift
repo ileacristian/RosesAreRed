@@ -12,6 +12,9 @@ struct OrderItemDetails: View {
     @ObservedObject var viewModel: OrderItemDetailsViewModel
     @StateObject var gpsLocationViewModel = GPSLocationViewModel()
 
+    @State var errorMessage: String = ""
+    @State var showsError = false
+
     var body: some View {
         VStack(alignment: .leading) {
             headerImageSection
@@ -26,6 +29,15 @@ struct OrderItemDetails: View {
             Spacer()
         }
         .navigationTitle(viewModel.order.description)
+        .onReceive(viewModel.$error.compactMap{$0}) { errorMessage in // compactMap filters out nil values
+            self.errorMessage = errorMessage
+            self.showsError = true
+        }
+        .onReceive(gpsLocationViewModel.$locationError.compactMap{$0}) { errorMessage in
+            self.errorMessage = errorMessage
+            self.showsError = true
+        }
+        .alert(errorMessage, isPresented: $showsError, actions: {})
     }
 
     var headerImageSection: some View {

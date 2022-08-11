@@ -9,7 +9,9 @@ import SwiftUI
 
 struct OrderListView: View {
     @StateObject var viewModel = OrderListViewModel()
-
+    @State var errorMessage: String = ""
+    @State var showsError = false
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -31,6 +33,11 @@ struct OrderListView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .onReceive(viewModel.$error.compactMap{$0}) { errorMessage in  // compactMap filters out nil values
+            self.errorMessage = errorMessage
+            self.showsError = true
+        }
+        .alert(errorMessage, isPresented: $showsError, actions: {})
     }
 
     var emptyView: some View {

@@ -11,13 +11,22 @@ import CoreLocation
 enum GPSLocationError: Error {
     case unauthorized
     case unableToDetermineLocation
+
+    func prettyErrorMessage() -> String {
+        switch self {
+            case .unauthorized:
+                return "Error: GPS location was unauthorized."
+            case .unableToDetermineLocation:
+                return "Error: Unable to determine GPS Location."
+        }
+    }
 }
 
 class GPSLocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
 
-    @Published private(set) var location: CLLocation?
-    @Published private(set) var locationError: GPSLocationError?
+    @Published var location: CLLocation?
+    @Published var locationError: String?
 
     override init() {
         super.init()
@@ -41,9 +50,9 @@ class GPSLocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegat
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         if let error = error as? CLError, error.code == .denied {
-            locationError = .unauthorized
+            locationError = GPSLocationError.unauthorized.prettyErrorMessage()
         } else {
-            locationError = .unableToDetermineLocation
+            locationError = GPSLocationError.unableToDetermineLocation.prettyErrorMessage()
         }
     }
 
@@ -59,9 +68,9 @@ class GPSLocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegat
             case .denied,
                     .notDetermined,
                     .restricted:
-                locationError = .unauthorized
+                locationError = GPSLocationError.unauthorized.prettyErrorMessage()
             @unknown default:
-                locationError = .unauthorized
+                locationError = GPSLocationError.unauthorized.prettyErrorMessage()
         }
     }
 }

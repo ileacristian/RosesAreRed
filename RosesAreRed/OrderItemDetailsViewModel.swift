@@ -10,6 +10,7 @@ import SwiftUI
 import Combine
 import CoreLocation
 
+@MainActor
 class OrderItemDetailsViewModel: ObservableObject {
     var orderBinding: Binding<Order>
     var order: Order {
@@ -17,7 +18,7 @@ class OrderItemDetailsViewModel: ObservableObject {
     }
 
     @Published var customer: Customer?
-    @Published var error: String = ""
+    @Published var error: String?
 
     init(orderBinding: Binding<Order>) {
         self.orderBinding = orderBinding
