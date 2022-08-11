@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		7DC66B2928A51D7700BC74BA /* RosesAreRedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */; };
-		7DC66B2B28A51D7700BC74BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2A28A51D7700BC74BA /* ContentView.swift */; };
+		7DC66B2B28A51D7700BC74BA /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2A28A51D7700BC74BA /* OrderListView.swift */; };
 		7DC66B2D28A51D7800BC74BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DC66B2C28A51D7800BC74BA /* Assets.xcassets */; };
 		7DC66B3028A51D7800BC74BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DC66B2F28A51D7800BC74BA /* Preview Assets.xcassets */; };
+		7DC66B3728A52A6200BC74BA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3628A52A6200BC74BA /* API.swift */; };
+		7DC66B3928A52E1800BC74BA /* OrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */; };
+		7DC66B3C28A531C400BC74BA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3B28A531C400BC74BA /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7DC66B2528A51D7700BC74BA /* RosesAreRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosesAreRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosesAreRedApp.swift; sourceTree = "<group>"; };
-		7DC66B2A28A51D7700BC74BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7DC66B2A28A51D7700BC74BA /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		7DC66B2C28A51D7800BC74BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DC66B2F28A51D7800BC74BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7DC66B3628A52A6200BC74BA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewModel.swift; sourceTree = "<group>"; };
+		7DC66B3A28A52EF800BC74BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7DC66B3B28A531C400BC74BA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		7DC66B2728A51D7700BC74BA /* RosesAreRed */ = {
 			isa = PBXGroup;
 			children = (
+				7DC66B3A28A52EF800BC74BA /* Info.plist */,
 				7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */,
-				7DC66B2A28A51D7700BC74BA /* ContentView.swift */,
+				7DC66B2A28A51D7700BC74BA /* OrderListView.swift */,
+				7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */,
+				7DC66B3628A52A6200BC74BA /* API.swift */,
+				7DC66B3B28A531C400BC74BA /* Models.swift */,
 				7DC66B2C28A51D7800BC74BA /* Assets.xcassets */,
 				7DC66B2E28A51D7800BC74BA /* Preview Content */,
 			);
@@ -137,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DC66B2B28A51D7700BC74BA /* ContentView.swift in Sources */,
+				7DC66B2B28A51D7700BC74BA /* OrderListView.swift in Sources */,
+				7DC66B3728A52A6200BC74BA /* API.swift in Sources */,
 				7DC66B2928A51D7700BC74BA /* RosesAreRedApp.swift in Sources */,
+				7DC66B3928A52E1800BC74BA /* OrderListViewModel.swift in Sources */,
+				7DC66B3C28A531C400BC74BA /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +284,7 @@
 				DEVELOPMENT_TEAM = P377655ZXU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RosesAreRed/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +314,7 @@
 				DEVELOPMENT_TEAM = P377655ZXU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RosesAreRed/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
