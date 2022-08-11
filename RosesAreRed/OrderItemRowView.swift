@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct OrderItemRowView: View {
-    var order: Order
+    @Binding var order: Order
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: order.image_url)) { image in
+            CachedAsyncImage(url: URL(string: order.image_url)) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
@@ -31,12 +32,12 @@ struct OrderItemRowView: View {
 struct OrderItemRowView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            OrderItemRowView(order: Order(id: 1,
-                                          description: "Test",
-                                          price: 5,
-                                          customer_id: 1,
-                                          image_url: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg",
-                                          status: .new))
+            OrderItemRowView(order: .constant(Order(id: 1,
+                                                    description: "Test",
+                                                    price: 5,
+                                                    customer_id: 1,
+                                                    image_url: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg",
+                                                    status: .new)))
         }
     }
 }

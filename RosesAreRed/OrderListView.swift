@@ -12,22 +12,25 @@ struct OrderListView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach($viewModel.orders) { order in
-                    NavigationLink(destination: OrderItemDetails(order: order)) {
-                        OrderItemRowView(order: order.wrappedValue)
+            ZStack {
+                List {
+                    ForEach($viewModel.orders) { order in
+                        NavigationLink(destination: OrderItemDetails(viewModel: OrderItemDetailsViewModel(orderBinding: order))) {
+                            OrderItemRowView(order: order)
+                        }
                     }
                 }
+                .refreshable {
+                    viewModel.fetchOrders()
+                }
+                .navigationTitle("Orders")
 
                 if viewModel.orders.isEmpty {
                     emptyView
                 }
             }
-            .refreshable {
-                viewModel.fetchOrders()
-            }
-            .navigationTitle("Orders")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     var emptyView: some View {

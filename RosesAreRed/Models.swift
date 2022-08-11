@@ -30,8 +30,4 @@ struct Customer: Codable, Identifiable {
     let name: String
     let latitude: CLLocationDegrees
     let longitude: CLLocationDegrees
-
-    var coordinate: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-    }
 }
