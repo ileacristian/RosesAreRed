@@ -32,12 +32,13 @@ struct OrderItemRowView: View {
 struct OrderItemRowView_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            OrderItemRowView(order: .constant(Order(id: 1,
-                                                    description: "Test",
-                                                    price: 5,
-                                                    customer_id: 1,
-                                                    image_url: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg",
-                                                    status: .new)))
+            let order = Order(id: 1,
+                              description: "Test",
+                              price: 5,
+                              customer_id: 1,
+                              image_url: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg",
+                              status: .new)
+            OrderItemRowView(order: .constant(order))
         }
     }
 }

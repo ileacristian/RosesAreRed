@@ -26,6 +26,8 @@ struct OrderItemDetails: View {
             }
             .padding(.leading, 20)
 
+            mapSection
+
             Spacer()
         }
         .navigationTitle(viewModel.order.description)
@@ -64,7 +66,7 @@ struct OrderItemDetails: View {
     var orderStatusSection: some View {
         HStack {
             Text("Order status:")
-                .font(.system(size: 18, weight: .medium))
+                .font(.system(size: 20, weight: .medium))
 
             OrderStatusView(status: viewModel.order.status)
 
@@ -81,11 +83,27 @@ struct OrderItemDetails: View {
     }
 
     var gpsLocationDistanceSection: some View {
-        if let distanceToCustomer = viewModel.distanceToCustomer(fromCurrentLocation: gpsLocationViewModel.location) {
+        let text: Text
+        if let distanceToCustomer = viewModel.distanceToCustomer(fromCurrentLocation: gpsLocationViewModel.location),
+           let customer = viewModel.customer {
             let formattedDistanceString = String(format: "%.1f", distanceToCustomer)
-            return Text("The customer is \(formattedDistanceString)km away from your current position.")
+            text = Text("\(customer.name) is \(formattedDistanceString)km away from your current position.")
         } else {
-            return Text("Calculating distance to customer...")
+            text = Text("Calculating distance to customer...")
+        }
+        return text.font(.system(size: 20))
+    }
+
+    var mapSection: some View {
+        if let currentLocation = gpsLocationViewModel.location, let customer = viewModel.customer {
+            return AnyView(
+                MapView(startLocation: currentLocation.coordinate, endLocation: customer.coordinate)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .padding()
+            )
+        } else {
+            return AnyView(EmptyView())
+
         }
     }
 }
@@ -93,12 +111,14 @@ struct OrderItemDetails: View {
 struct OrderItemDetails_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            OrderItemDetails(viewModel: OrderItemDetailsViewModel(orderBinding: .constant(Order(id: 1,
-                                                                                                description: "Tulips",
-                                                                                                price: 69,
-                                                                                                customer_id: 143,
-                                                                                                image_url: "https://cdn.britannica.com/37/227037-050-CA792866/Broken-tulip-flower.jpg",
-                                                                                                status: .new))))
+            let order = Order(id: 1,
+                              description: "Tulips",
+                              price: 69,
+                              customer_id: 143,
+                              image_url: "https://cdn.britannica.com/37/227037-050-CA792866/Broken-tulip-flower.jpg",
+                              status: .new)
+            
+            OrderItemDetails(viewModel: OrderItemDetailsViewModel(orderBinding: .constant(order)))
             .navigationTitle("Tulips")
         }
     }

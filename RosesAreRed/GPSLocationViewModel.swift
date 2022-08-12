@@ -33,19 +33,7 @@ class GPSLocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegat
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
-        locationManager.startUpdatingHeading()
         locationManager.allowsBackgroundLocationUpdates = true
-        fetchLocation()
-    }
-
-    func fetchLocation() {
-        if locationManager.authorizationStatus == .authorizedAlways ||
-            locationManager.authorizationStatus == .authorizedWhenInUse {
-            locationManager.requestLocation()
-        } else {
-            locationManager.requestWhenInUseAuthorization()
-        }
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -62,15 +50,15 @@ class GPSLocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegat
 
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
-            case .authorizedAlways,
-                    .authorizedWhenInUse:
+            case .authorizedAlways, .authorizedWhenInUse:
                 manager.requestLocation()
-            case .denied,
-                    .notDetermined,
-                    .restricted:
+                manager.startUpdatingLocation()
+            case .denied, .restricted:
                 locationError = GPSLocationError.unauthorized.prettyErrorMessage()
+            case .notDetermined:
+                break
             @unknown default:
-                locationError = GPSLocationError.unauthorized.prettyErrorMessage()
+                break
         }
     }
 }
