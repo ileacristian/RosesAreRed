@@ -72,7 +72,6 @@
 		7DC66B2728A51D7700BC74BA /* RosesAreRed */ = {
 			isa = PBXGroup;
 			children = (
-				7DC66B3A28A52EF800BC74BA /* Info.plist */,
 				7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */,
 				7DC66B2A28A51D7700BC74BA /* OrderListView.swift */,
 				7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */,
@@ -85,6 +84,7 @@
 				7DC66B3628A52A6200BC74BA /* API.swift */,
 				7DC66B3B28A531C400BC74BA /* Models.swift */,
 				7DC66B2C28A51D7800BC74BA /* Assets.xcassets */,
+				7DC66B3A28A52EF800BC74BA /* Info.plist */,
 				7DC66B2E28A51D7800BC74BA /* Preview Content */,
 			);
 			path = RosesAreRed;

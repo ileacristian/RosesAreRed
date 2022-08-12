@@ -20,9 +20,18 @@ class OrderItemDetailsViewModel: ObservableObject {
     @Published var customer: Customer?
     @Published var error: String?
 
+    var cancellables: Set<AnyCancellable> = []
+
     init(orderBinding: Binding<Order>) {
         self.orderBinding = orderBinding
 
+        // check for cached customer
+        if let customer = order.customer {
+            self.customer = customer
+            return
+        }
+
+        // get customers if not already cached
         API.shared.getCustomers()
             .catch { error -> Just<[Customer]> in
                 self.error = error.prettyErrorMessage()
@@ -33,7 +42,11 @@ class OrderItemDetailsViewModel: ObservableObject {
                     customer.id == self.order.customer_id
                 }
             }
-            .assign(to: &$customer)
+            .sink { customer in
+                orderBinding.wrappedValue.customer = customer // cache customer
+                self.customer = customer
+            }
+            .store(in: &cancellables)
     }
 
     // distance in km

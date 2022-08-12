@@ -23,6 +23,7 @@ struct Order: Codable, Identifiable {
     let customer_id: Int
     let image_url: String
     var status: OrderStatus
+    var customer: Customer? // used as a simple cache
 }
 
 struct Customer: Codable, Identifiable {
