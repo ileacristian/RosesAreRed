@@ -26,14 +26,15 @@ fastlane/s3-secrets.json
 # Xcode - User files
 xcuserdata/
 
-**/*.xcodeproj/project.xcworkspace/*
-!**/*.xcodeproj/project.xcworkspace/xcshareddata
+# **/*.xcodeproj/project.xcworkspace/*
+# !**/*.xcodeproj/project.xcworkspace/xcshareddata
 
-**/*.xcodeproj/project.xcworkspace/xcshareddata/*
-!**/*.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+# **/*.xcodeproj/project.xcworkspace/xcshareddata/*
+# !**/*.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+# !**/*.xcodeproj/projectproject.xcworkspace/xcshareddata/swiftpm/Package.resolved
 
-**/*.playground/playground.xcworkspace/*
-!**/*.playground/playground.xcworkspace/xcshareddata
+# **/*.playground/playground.xcworkspace/*
+# !**/*.playground/playground.xcworkspace/xcshareddata
 
-**/*.playground/playground.xcworkspace/xcshareddata/*
-!**/*.playground/playground.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+# **/*.playground/playground.xcworkspace/xcshareddata/*
+# !**/*.playground/playground.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
