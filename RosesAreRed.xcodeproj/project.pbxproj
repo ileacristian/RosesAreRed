@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2801AE28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2801AD28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift */; };
+		7D2801B128A5BD70001E2FD0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D2801B028A5BD70001E2FD0 /* CachedAsyncImage */; };
+		7D2801B328A5CF73001E2FD0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2801B228A5CF73001E2FD0 /* MapView.swift */; };
+		7D635B0F28A55D2800AB9DC8 /* OrderItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */; };
+		7D635B1128A5632700AB9DC8 /* OrderItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D635B1028A5632700AB9DC8 /* OrderItemDetails.swift */; };
+		7D635B1328A5974000AB9DC8 /* GPSLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D635B1228A5974000AB9DC8 /* GPSLocationViewModel.swift */; };
 		7DC66B2928A51D7700BC74BA /* RosesAreRedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */; };
-		7DC66B2B28A51D7700BC74BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2A28A51D7700BC74BA /* ContentView.swift */; };
+		7DC66B2B28A51D7700BC74BA /* OrderListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B2A28A51D7700BC74BA /* OrderListView.swift */; };
 		7DC66B2D28A51D7800BC74BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DC66B2C28A51D7800BC74BA /* Assets.xcassets */; };
 		7DC66B3028A51D7800BC74BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DC66B2F28A51D7800BC74BA /* Preview Assets.xcassets */; };
+		7DC66B3728A52A6200BC74BA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3628A52A6200BC74BA /* API.swift */; };
+		7DC66B3928A52E1800BC74BA /* OrderListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */; };
+		7DC66B3C28A531C400BC74BA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3B28A531C400BC74BA /* Models.swift */; };
+		7DC66B3E28A542C200BC74BA /* OrderStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3D28A542C200BC74BA /* OrderStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D2801AD28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemDetailsViewModel.swift; sourceTree = "<group>"; };
+		7D2801B228A5CF73001E2FD0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemRowView.swift; sourceTree = "<group>"; };
+		7D635B1028A5632700AB9DC8 /* OrderItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemDetails.swift; sourceTree = "<group>"; };
+		7D635B1228A5974000AB9DC8 /* GPSLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSLocationViewModel.swift; sourceTree = "<group>"; };
 		7DC66B2528A51D7700BC74BA /* RosesAreRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RosesAreRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosesAreRedApp.swift; sourceTree = "<group>"; };
-		7DC66B2A28A51D7700BC74BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7DC66B2A28A51D7700BC74BA /* OrderListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListView.swift; sourceTree = "<group>"; };
 		7DC66B2C28A51D7800BC74BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DC66B2F28A51D7800BC74BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7DC66B3628A52A6200BC74BA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListViewModel.swift; sourceTree = "<group>"; };
+		7DC66B3A28A52EF800BC74BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7DC66B3B28A531C400BC74BA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7DC66B3D28A542C200BC74BA /* OrderStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2801B128A5BD70001E2FD0 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +73,18 @@
 			isa = PBXGroup;
 			children = (
 				7DC66B2828A51D7700BC74BA /* RosesAreRedApp.swift */,
-				7DC66B2A28A51D7700BC74BA /* ContentView.swift */,
+				7DC66B2A28A51D7700BC74BA /* OrderListView.swift */,
+				7DC66B3828A52E1800BC74BA /* OrderListViewModel.swift */,
+				7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */,
+				7DC66B3D28A542C200BC74BA /* OrderStatusView.swift */,
+				7D635B1028A5632700AB9DC8 /* OrderItemDetails.swift */,
+				7D2801AD28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift */,
+				7D635B1228A5974000AB9DC8 /* GPSLocationViewModel.swift */,
+				7D2801B228A5CF73001E2FD0 /* MapView.swift */,
+				7DC66B3628A52A6200BC74BA /* API.swift */,
+				7DC66B3B28A531C400BC74BA /* Models.swift */,
 				7DC66B2C28A51D7800BC74BA /* Assets.xcassets */,
+				7DC66B3A28A52EF800BC74BA /* Info.plist */,
 				7DC66B2E28A51D7800BC74BA /* Preview Content */,
 			);
 			path = RosesAreRed;
@@ -83,6 +114,9 @@
 			dependencies = (
 			);
 			name = RosesAreRed;
+			packageProductDependencies = (
+				7D2801B028A5BD70001E2FD0 /* CachedAsyncImage */,
+			);
 			productName = RosesAreRed;
 			productReference = 7DC66B2528A51D7700BC74BA /* RosesAreRed.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +145,9 @@
 				Base,
 			);
 			mainGroup = 7DC66B1C28A51D7700BC74BA;
+			packageReferences = (
+				7D2801AF28A5BD70001E2FD0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 7DC66B2628A51D7700BC74BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +174,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DC66B2B28A51D7700BC74BA /* ContentView.swift in Sources */,
+				7DC66B2B28A51D7700BC74BA /* OrderListView.swift in Sources */,
+				7DC66B3728A52A6200BC74BA /* API.swift in Sources */,
+				7D635B1128A5632700AB9DC8 /* OrderItemDetails.swift in Sources */,
+				7D2801B328A5CF73001E2FD0 /* MapView.swift in Sources */,
 				7DC66B2928A51D7700BC74BA /* RosesAreRedApp.swift in Sources */,
+				7DC66B3E28A542C200BC74BA /* OrderStatusView.swift in Sources */,
+				7D2801AE28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift in Sources */,
+				7D635B0F28A55D2800AB9DC8 /* OrderItemRowView.swift in Sources */,
+				7DC66B3928A52E1800BC74BA /* OrderListViewModel.swift in Sources */,
+				7DC66B3C28A531C400BC74BA /* Models.swift in Sources */,
+				7D635B1328A5974000AB9DC8 /* GPSLocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -267,12 +313,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RosesAreRed/Preview Content\"";
-				DEVELOPMENT_TEAM = P377655ZXU;
+				DEVELOPMENT_TEAM = 7F652V3TQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RosesAreRed/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your location is required to calculate the distance between you and the customers.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required to calculate the distance between you and the customers.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required to calculate the distance between you and the customers.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -280,11 +331,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ileacristian.RosesAreRed;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ileacristian.Roses-Are-Red";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,12 +347,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RosesAreRed/Preview Content\"";
-				DEVELOPMENT_TEAM = P377655ZXU;
+				DEVELOPMENT_TEAM = 7F652V3TQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RosesAreRed/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Your location is required to calculate the distance between you and the customers.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required to calculate the distance between you and the customers.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required to calculate the distance between you and the customers.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,11 +365,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ileacristian.RosesAreRed;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ileacristian.Roses-Are-Red";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D2801AF28A5BD70001E2FD0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D2801B028A5BD70001E2FD0 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D2801AF28A5BD70001E2FD0 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7DC66B1D28A51D7700BC74BA /* Project object */;
 }
