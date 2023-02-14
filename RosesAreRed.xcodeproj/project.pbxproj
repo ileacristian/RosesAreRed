@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5973FC3D299BB94400B55DAB /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5973FC3C299BB94400B55DAB /* Alamofire.xcframework */; };
 		5973FC3E299BB94400B55DAB /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5973FC3C299BB94400B55DAB /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5973FC47299BCA7500B55DAB /* RosesAreRedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5973FC46299BCA7500B55DAB /* RosesAreRedUITests.swift */; };
+		5973FC49299BCA7500B55DAB /* RosesAreRedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5973FC48299BCA7500B55DAB /* RosesAreRedUITestsLaunchTests.swift */; };
 		7D2801AE28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2801AD28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift */; };
 		7D2801B128A5BD70001E2FD0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D2801B028A5BD70001E2FD0 /* CachedAsyncImage */; };
 		7D2801B328A5CF73001E2FD0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2801B228A5CF73001E2FD0 /* MapView.swift */; };
@@ -24,6 +26,16 @@
 		7DC66B3C28A531C400BC74BA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3B28A531C400BC74BA /* Models.swift */; };
 		7DC66B3E28A542C200BC74BA /* OrderStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3D28A542C200BC74BA /* OrderStatusView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5973FC4A299BCA7500B55DAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DC66B1D28A51D7700BC74BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DC66B2428A51D7700BC74BA;
+			remoteInfo = RosesAreRed;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		5973FC3F299BB94400B55DAB /* Embed Frameworks */ = {
@@ -41,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		5973FC3C299BB94400B55DAB /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		5973FC44299BCA7500B55DAB /* RosesAreRedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RosesAreRedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5973FC46299BCA7500B55DAB /* RosesAreRedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosesAreRedUITests.swift; sourceTree = "<group>"; };
+		5973FC48299BCA7500B55DAB /* RosesAreRedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosesAreRedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7D2801AD28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		7D2801B228A5CF73001E2FD0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemRowView.swift; sourceTree = "<group>"; };
@@ -59,6 +74,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5973FC41299BCA7500B55DAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DC66B2228A51D7700BC74BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,10 +101,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5973FC45299BCA7500B55DAB /* RosesAreRedUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5973FC46299BCA7500B55DAB /* RosesAreRedUITests.swift */,
+				5973FC48299BCA7500B55DAB /* RosesAreRedUITestsLaunchTests.swift */,
+			);
+			path = RosesAreRedUITests;
+			sourceTree = "<group>";
+		};
 		7DC66B1C28A51D7700BC74BA = {
 			isa = PBXGroup;
 			children = (
 				7DC66B2728A51D7700BC74BA /* RosesAreRed */,
+				5973FC45299BCA7500B55DAB /* RosesAreRedUITests */,
 				7DC66B2628A51D7700BC74BA /* Products */,
 				5973FC3B299BB94400B55DAB /* Frameworks */,
 			);
@@ -92,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				7DC66B2528A51D7700BC74BA /* RosesAreRed.app */,
+				5973FC44299BCA7500B55DAB /* RosesAreRedUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +161,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5973FC43299BCA7500B55DAB /* RosesAreRedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5973FC4C299BCA7500B55DAB /* Build configuration list for PBXNativeTarget "RosesAreRedUITests" */;
+			buildPhases = (
+				5973FC40299BCA7500B55DAB /* Sources */,
+				5973FC41299BCA7500B55DAB /* Frameworks */,
+				5973FC42299BCA7500B55DAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5973FC4B299BCA7500B55DAB /* PBXTargetDependency */,
+			);
+			name = RosesAreRedUITests;
+			productName = RosesAreRedUITests;
+			productReference = 5973FC44299BCA7500B55DAB /* RosesAreRedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		7DC66B2428A51D7700BC74BA /* RosesAreRed */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DC66B3328A51D7800BC74BA /* Build configuration list for PBXNativeTarget "RosesAreRed" */;
@@ -159,6 +210,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					5973FC43299BCA7500B55DAB = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7DC66B2428A51D7700BC74BA;
+					};
 					7DC66B2428A51D7700BC74BA = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -181,11 +236,19 @@
 			projectRoot = "";
 			targets = (
 				7DC66B2428A51D7700BC74BA /* RosesAreRed */,
+				5973FC43299BCA7500B55DAB /* RosesAreRedUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5973FC42299BCA7500B55DAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DC66B2328A51D7700BC74BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,6 +261,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5973FC40299BCA7500B55DAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5973FC49299BCA7500B55DAB /* RosesAreRedUITestsLaunchTests.swift in Sources */,
+				5973FC47299BCA7500B55DAB /* RosesAreRedUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DC66B2128A51D7700BC74BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,7 +290,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5973FC4B299BCA7500B55DAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DC66B2428A51D7700BC74BA /* RosesAreRed */;
+			targetProxy = 5973FC4A299BCA7500B55DAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		5973FC4D299BCA7500B55DAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZTJ3R7P3UF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.RosesAreRedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RosesAreRed;
+			};
+			name = Debug;
+		};
+		5973FC4E299BCA7500B55DAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZTJ3R7P3UF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.RosesAreRedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RosesAreRed;
+			};
+			name = Release;
+		};
 		7DC66B3128A51D7800BC74BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,6 +520,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5973FC4C299BCA7500B55DAB /* Build configuration list for PBXNativeTarget "RosesAreRedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5973FC4D299BCA7500B55DAB /* Debug */,
+				5973FC4E299BCA7500B55DAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7DC66B2028A51D7700BC74BA /* Build configuration list for PBXProject "RosesAreRed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
