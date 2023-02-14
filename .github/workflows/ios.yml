@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: olejnjak/carthage-workaround@v1
         with:
-          action: bootstrap --platform iOS --cache-builds
+          action: bootstrap --platform iOS --use-xcframeworks
       - name: Build
         env:
           scheme: ${{ 'default' }}
