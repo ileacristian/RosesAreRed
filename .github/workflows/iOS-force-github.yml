@@ -12,12 +12,11 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - name: Change Cartfile contents with Cartfile.github contents
-      - shell: bash
-        run: |
-          rm Cartfile && mv Cartfile.github Cartfile
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Change Cartfile contents with Cartfile.github contents
+        run: |
+          rm Cartfile && mv Cartfile.github Cartfile
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
