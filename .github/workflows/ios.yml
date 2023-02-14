@@ -12,6 +12,9 @@ jobs:
     runs-on: macos-latest
 
     steps:
+      - name: Carthage
+        run: |
+          carthage update --platform iOS --use-xcframeworks
       - name: Checkout
         uses: actions/checkout@v3
       - name: Set Default Scheme
