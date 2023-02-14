@@ -1,10 +1,7 @@
-name: iOS Build Github
+name: iOS Build Gitlab
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  workflow_dispatch
 
 jobs:
   build:
