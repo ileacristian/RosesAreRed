@@ -1,4 +1,4 @@
-name: iOS starter workflow
+name: iOS Build Github
 
 on:
   push:
@@ -20,7 +20,6 @@ jobs:
           default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['targets'][0]")
           echo $default | cat >default
           echo Using default scheme: $default
-      - uses: actions/checkout@v2
       - uses: olejnjak/carthage-workaround@v1
         with:
           action: bootstrap --platform iOS --use-xcframeworks
