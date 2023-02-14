@@ -17,6 +17,9 @@ fastlane/FastlaneRunner
 # fastlane s3-secrets.json
 fastlane/s3-secrets.json
 
+#Carthage
+Carthage
+
 # Finder
 .DS_Store
 

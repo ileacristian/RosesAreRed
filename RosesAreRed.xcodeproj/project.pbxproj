@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5973FC3D299BB94400B55DAB /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5973FC3C299BB94400B55DAB /* Alamofire.xcframework */; };
+		5973FC3E299BB94400B55DAB /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5973FC3C299BB94400B55DAB /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7D2801AE28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2801AD28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift */; };
 		7D2801B128A5BD70001E2FD0 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D2801B028A5BD70001E2FD0 /* CachedAsyncImage */; };
 		7D2801B328A5CF73001E2FD0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2801B228A5CF73001E2FD0 /* MapView.swift */; };
@@ -23,7 +25,22 @@
 		7DC66B3E28A542C200BC74BA /* OrderStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC66B3D28A542C200BC74BA /* OrderStatusView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5973FC3F299BB94400B55DAB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5973FC3E299BB94400B55DAB /* Alamofire.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5973FC3C299BB94400B55DAB /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
 		7D2801AD28A59F8C001E2FD0 /* OrderItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemDetailsViewModel.swift; sourceTree = "<group>"; };
 		7D2801B228A5CF73001E2FD0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		7D635B0E28A55D2800AB9DC8 /* OrderItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemRowView.swift; sourceTree = "<group>"; };
@@ -46,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5973FC3D299BB94400B55DAB /* Alamofire.xcframework in Frameworks */,
 				7D2801B128A5BD70001E2FD0 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -53,11 +71,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5973FC3B299BB94400B55DAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5973FC3C299BB94400B55DAB /* Alamofire.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7DC66B1C28A51D7700BC74BA = {
 			isa = PBXGroup;
 			children = (
 				7DC66B2728A51D7700BC74BA /* RosesAreRed */,
 				7DC66B2628A51D7700BC74BA /* Products */,
+				5973FC3B299BB94400B55DAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +135,7 @@
 				7DC66B2128A51D7700BC74BA /* Sources */,
 				7DC66B2228A51D7700BC74BA /* Frameworks */,
 				7DC66B2328A51D7700BC74BA /* Resources */,
+				5973FC3F299BB94400B55DAB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

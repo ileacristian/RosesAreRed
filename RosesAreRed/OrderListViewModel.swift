@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 @MainActor
 class OrderListViewModel: ObservableObject {
@@ -16,6 +17,8 @@ class OrderListViewModel: ObservableObject {
 
     init() {
         fetchOrders()
+        
+        error = "Text from alamofire module: \(AlamofireVersionNumber)"
     }
 
     func fetchOrders() {
