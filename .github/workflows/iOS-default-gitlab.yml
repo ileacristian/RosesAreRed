@@ -1,4 +1,4 @@
-name: iOS Build Github
+name: iOS Build Gitlab
 
 on:
   push:
