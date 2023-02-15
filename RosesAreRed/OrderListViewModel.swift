@@ -18,7 +18,7 @@ class OrderListViewModel: ObservableObject {
     init() {
         fetchOrders()
         
-        error = "Text from alamofire module: \(AF.session)"
+        error = "Text from alamofire module: \(Alamofire.Request.self)"
     }
 
     func fetchOrders() {
